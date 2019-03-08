@@ -1,0 +1,12 @@
+---
+# tasks file for ansible-role-apache
+- name: get httpd package
+  yum:
+    name: "{{ full_package_url }}"
+    state: "{{ repo_state }}"
+
+- name: start httpd
+  service:
+    name: httpd
+    state: "{{ service_state }}"
+    enabled: yes

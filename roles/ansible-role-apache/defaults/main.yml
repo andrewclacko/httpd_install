@@ -1,0 +1,11 @@
+---
+# defaults file for ansible-role-apache
+repo_url: https://rpmfind.net/linux/centos/7.6.1810/os/x86_64/Packages 
+package_name: httpd-2.4.6-88.el7.centos.x86_64.rpm
+full_package_url: "{{ repo_url}}/{{ package_name }}"
+
+repo_state: latest
+
+service_state: restarted
+
+become: yes

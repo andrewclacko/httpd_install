@@ -1,0 +1,7 @@
+
+---
+- hosts: 172.16.0.5
+  become: yes
+  remote_user: ansible
+  roles:
+    - ansible-role-apache
